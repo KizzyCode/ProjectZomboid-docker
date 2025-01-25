@@ -1,0 +1,8 @@
+# Ignore .DS_Store
+.DS_Store
+
+# Ignore artifacts
+/mount/*
+/mount/Server/*
+!/mount/Server
+!/mount/Server/ProjectZomboid.ini

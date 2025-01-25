@@ -1,0 +1,26 @@
+volumes:
+  appcache:
+
+services:
+  projectzomboid:
+    build: .
+    ports:
+      - "16261:16261/udp"
+      - "16262:16262/udp"
+    volumes:
+      - appcache:/home/projectzomboid/app
+      - ./mount:/home/projectzomboid/Zomboid
+    command:
+      # Runtime arguments
+      - -Xmx12G
+      - -Xms4G
+      # Server arguments
+      - --
+      # Disable steam mode
+      - -nosteam
+      # Admin password
+      - -adminpassword
+      - insecure--FIXME
+      # Server name
+      - -servername
+      - ProjectZomboid
