@@ -9,7 +9,7 @@ if ! test -e "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq"; then
     export CPU_MHZ=${CPU_MHZ:-1600}
 fi
 
-# Install/update 7 Days to Die
+# Install/update app
 /usr/games/steamcmd \
     +@sSteamCmdForcePlatformBitness 64 \
     +force_install_dir "$HOME/app" \
