@@ -19,9 +19,9 @@ fi
 
 # Execute server
 export JSIG="libjsig.so"
-export PATH="$HOME/app/jre64/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/app/linux64:$HOME/app/natives:$HOME/app:$HOME/app/jre64/lib/amd64"
 export LD_PRELOAD="$JSIG" 
+export PATH="$HOME/app/jre64/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/app/linux64:$HOME/app/natives:$HOME/app/jre64/lib/server:$HOME/app/jre64/lib:$HOME/app"
 
 cd "$HOME/app"
-./ProjectZomboid64 "$@"
+exec ./ProjectZomboid64 "$@"
